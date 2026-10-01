@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Toplak Bau</title>
+  <script src="https://officeapis.public.onecdn.static.microsoft/1/office.js"></script>
+  <link rel="stylesheet" href="taskpane.css">
+</head>
+<body>
+<main>
+  <h1>TOPLAK BAU</h1>
+  <p class="sub">Dokument vorbereiten</p>
+
+  <label for="type">Dokumentart</label>
+  <select id="type">
+    <option value="invoice">Rechnung</option>
+    <option value="offer">Offerte</option>
+    <option value="reminder">Zahlungserinnerung</option>
+    <option value="dunning">Mahnung</option>
+  </select>
+
+  <div id="numberWrap">
+    <label id="numberLabel" for="number">Rechnungsnummer</label>
+    <input id="number" placeholder="z. B. RE-2026-0148">
+  </div>
+
+  <div id="levelWrap" class="hidden">
+    <label for="level">Mahnstufe</label>
+    <select id="level">
+      <option value="1">1. Mahnung</option>
+      <option value="2">2. Mahnung</option>
+      <option value="3">3. Mahnung</option>
+      <option value="last">Letzte Mahnung</option>
+    </select>
+  </div>
+
+  <button id="apply">E-Mail vorbereiten</button>
+  <p id="status"></p>
+  <p class="hint">Vorgesehener Absender: buchhaltung@toplak-bau.ch</p>
+</main>
+<script src="taskpane.js"></script>
+</body>
+</html>
